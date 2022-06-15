@@ -1,0 +1,86 @@
+#app {
+  font-family: arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+
+  min-height: 100vh;
+  background: #f2f2f2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* You can add your own css animations with the following available psuedo selectors
+  ::page-transition-container(root)
+  ::page-transition-image-wrapper(root)
+  ::page-transition-outgoing-image(root)
+  ::page-transition-incoming-image(root)
+*/
+::page-transition-outgoing-image(article-img) {
+}
+
+::page-transition-incoming-image(article-img) {
+}
+
+img {
+  page-transition-tag: article-img;
+  contain: paint;
+
+  height: auto;
+  max-width: 100%;
+}
+
+header {
+  padding: 1rem 2rem;
+  background: cornflowerblue;
+  color: #fff;
+
+  page-transition-tag: site-header;
+  contain: paint;
+}
+
+ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1rem;
+
+  padding: 2rem;
+
+  list-style: none;
+}
+
+ol article {
+  background: #fff;
+  padding: 1rem;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+ol article a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+ol article a:hover,
+ol article a:focus {
+  text-decoration: underline;
+}
+
+ol article a > * + * {
+    margin-top: 1rem;
+}
+
+.detail {
+  max-width: 80rem;
+  margin: 0 auto;
+
+  display: none;
+}
+
+.detail > * + * {
+  margin-top: 2rem;
+}
