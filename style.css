@@ -27,7 +27,6 @@
 }
 
 img {
-  page-transition-tag: article-img;
   contain: paint;
 
   height: auto;
@@ -79,6 +78,11 @@ ol article a > * + * {
   margin: 0 auto;
 
   display: none;
+}
+
+.detail img {
+  page-transition-tag: article-img;
+  contain: paint;
 }
 
 .detail > * + * {
